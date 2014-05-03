@@ -4,6 +4,7 @@ package Main;
 import java.awt.Color;
 import java.awt.Graphics;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -42,6 +43,18 @@ public class Test extends JPanel {
         private static int[] properWindowSize(){
         	int[] temp = {(window.getWidth()-17), (window.getHeight()-39)};
         	return temp;
+        }
+        
+        /** Returns an ImageIcon, or null if the path was invalid. */
+        protected ImageIcon createImageIcon(String path,
+                                                   String description) {
+            java.net.URL imgURL = getClass().getResource(path);
+            if (imgURL != null) {
+                return new ImageIcon(imgURL, description);
+            } else {
+                System.err.println("Couldn't find file: " + path);
+                return null;
+            }
         }
 
     }

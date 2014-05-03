@@ -1,9 +1,12 @@
 package Main;
 import java.awt.EventQueue;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 import Console.Console;
+
+import javax.swing.JButton;
 
 public class runner {
 	static Console console;
@@ -28,12 +31,20 @@ public class runner {
                 window.setSize(840, 560);
                 window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 Test test = new Test(window, console);
-                window.add(test);
+                window.getContentPane().add(test);
+                test.setLayout(null);
+                ImageIcon icon = test.createImageIcon("Button1.png", "just an icon");
+                JButton btnTest = new JButton(icon);
+                
+                btnTest.setBounds(10, 11, 244, 85);
+                test.add(btnTest);
                 window.setVisible(true);
                 
                 
             }
         });
     }
+    
+    
 }
 
