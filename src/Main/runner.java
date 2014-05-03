@@ -33,7 +33,7 @@ public class runner {
                 Test test = new Test(window, console);
                 window.getContentPane().add(test);
                 test.setLayout(null);
-                ImageIcon icon = test.createImageIcon("Button1.png", "just an icon");
+                ImageIcon icon = test.createImageIcon("Textures/Button1.png", "just an icon");
                 JButton btnTest = new JButton(icon);
                 
                 btnTest.setBounds(10, 11, 244, 85);
