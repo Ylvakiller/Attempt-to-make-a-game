@@ -19,7 +19,7 @@ public class Console {
 	public Console(){
 		date = new Date();
 		
-		jf = new JFrame("Database assignment Console");
+		jf = new JFrame("Game Console");
 		jf.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		jf.getContentPane().setLayout(null);
 		jf.setSize(730,396);
